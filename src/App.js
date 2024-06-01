@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import CurrencyConverter from './components/CurrencyConverter/CurrencyConverter';
+import CurrenciesList from './components/CurrenciesList/CurrenciesList';
 import './App.css';
 
 function App() {
+  const [isCurrencyConverterDisplayed, setCurrencyConverterDisplay] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Connor's Currency App</h1>
+      <div>
+        <button onClick={() => setCurrencyConverterDisplay(false)}>Currencies</button>
+        <button onClick={() => setCurrencyConverterDisplay(true)}>Currencies Converter</button>
+      </div>
+
+      {isCurrencyConverterDisplayed ?
+        <CurrencyConverter />
+        :
+        <CurrenciesList />
+      }
     </div>
   );
 }
