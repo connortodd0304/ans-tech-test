@@ -1,0 +1,13 @@
+.currencyCard {
+    display: flex;
+    background: #FFF;
+    width: 400px;
+    height: 60px;
+    border-radius: 8px;
+    margin: auto;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}

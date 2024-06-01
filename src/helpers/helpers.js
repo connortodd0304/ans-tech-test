@@ -1,0 +1,52 @@
+export function currencyCodeToSymbolConverter (currencyCode) {
+    switch(currencyCode) {
+        case "ARS":
+            return "$";
+        case "AUD":
+            return "$";
+        case "BRL":
+            return "R$";
+        case "CAD":
+            return "$";
+        case "CHF":
+            return "CHF";
+        case "CLP":
+            return "$";
+        case "CNY":
+            return "¥";  
+        case "DKK":
+            return "kr";  
+        case "EUR":
+            return "€";
+        case "GBP":
+            return "£";  
+        case "HKD":
+            return "$";
+        case "INR":
+            return "₹"; 
+        case "ISK":
+            return "kr"; 
+        case "JPY":
+            return "¥"; 
+        case "KRW":
+            return "₩"; 
+        case "NZD":
+            return "$"; 
+        case "PLN":
+            return "zł"; 
+        case "RUB":
+            return "RUB";
+        case "SEK":
+            return "kr";
+        case "SGD":
+            return "$";
+        case "THB":
+            return "฿";
+        case "TRY":
+            return "₺";
+        case "TWD":
+            return "NT$";
+        default:
+            return "$";
+    }
+}

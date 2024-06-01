@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { currencyCodeToSymbolConverter } from "../../helpers/helpers";
+import './CurrenciesList.css';
 
-export default function CurrenciesList () {
+export default function CurrenciesList() {
     const [currencies, setCurrencies] = useState([]);
 
     useEffect(() => {
-       fetchCurrencies();
+        fetchCurrencies();
     }, []);
 
     const fetchCurrencies = () => {
@@ -19,11 +21,15 @@ export default function CurrenciesList () {
 
     return (
         <div>
-            <h1>CurrenciesList</h1>
+            <h1>Bitcoin Price Per Currency</h1>
+            <div className='currencyCard'>
+                <p>Currency Code</p>
+                <p>Last Price</p>
+            </div>
             {currencies?.map(currency => (
-                <div>
+                <div className='currencyCard'>
                     <p>{currency.symbol}</p>
-                    <p>{currency.last}</p>
+                    <p>{currencyCodeToSymbolConverter(currency.symbol)} {currency.last}</p>
                 </div>
             ))}
         </div>
